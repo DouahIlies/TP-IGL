@@ -30,10 +30,7 @@ public class StringHelper {
         return listChaine;
     }
 
-    public static String elimineMotVide(String chaine){
 
-        return "";
-    }
 
     public static String structurerText(String text){
         String chaine="";
