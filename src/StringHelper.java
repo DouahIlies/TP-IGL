@@ -54,6 +54,26 @@ public class StringHelper {
         return tb.length-1;
     }
 
+    public static String elimierMotsVides(String string){
+        String[] tmp = string.split(" ");
+        String result="";
+        for (String s :tmp) {
+            if (!s.equalsIgnoreCase("ou") && !s.equalsIgnoreCase("et") && !s.equalsIgnoreCase("à") && !s.equalsIgnoreCase("non")){
+                result+=s+" ";
+            }
+        }
+        return result;
+    }
+
+    public static String remplacerAvecCharSuivant(String string){
+
+        String result="";
+        for (char charactere:string.toCharArray()) {
+            result+=++charactere;
+        }
+        return result;
+    }
+
 
 
 
