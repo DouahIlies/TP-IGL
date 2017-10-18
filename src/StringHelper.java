@@ -7,6 +7,7 @@ public class StringHelper {
 
     public static String joinString(String tab[]){
         String result="";
+
         for (int i=0;i<tab.length-1;i++
              ) {
             result+=tab[i]+",";
@@ -54,10 +55,13 @@ public class StringHelper {
     public static String elimierMotsVides(String string){
         String[] tmp = string.split(" ");
         String result="";
-        for (String s :tmp) {
+        result=tmp[0];
+        for (int i=1;i<tmp.length-1;i++) {
+            String s = tmp[i];
             if (!s.equalsIgnoreCase("ou") && !s.equalsIgnoreCase("et") && !s.equalsIgnoreCase("à") && !s.equalsIgnoreCase("non")){
-                result+=s+" ";
+                result+=" "+s;
             }
+
         }
         return result;
     }
